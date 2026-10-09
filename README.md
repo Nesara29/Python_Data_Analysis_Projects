@@ -485,8 +485,3 @@ All datasets belong to their original authors. They are used here for learning a
 ## 📄 License
 
 Add your license here (for example MIT) and the name of the course or provider these project briefs came from.
-
-## 👤 Author
-
-**Your Name**  
-GitHub: [@your-username](https://github.com/your-username) · LinkedIn: [your-profile](https://linkedin.com/in/your-profile)
