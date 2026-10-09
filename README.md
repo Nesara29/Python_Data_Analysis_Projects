@@ -1,554 +1,414 @@
-# 🐍 Python Data Analysis Projects
+<h1 align="center">🐍 Python Data Analysis Projects</h1>
 
-A collection of **18 Python data analysis and data visualization projects** built using **Jupyter Notebook, Pandas, and Matplotlib**.
+<p align="center">
+18 hands-on projects that turn real-world datasets into answers and charts using <b>Python</b>, <b>pandas</b> and <b>matplotlib</b>.
+</p>
 
-The projects use real-world datasets covering topics such as **science, biology, geography, technology, music, surveys, transportation, astronomy, art, and global Internet usage**.
-
----
-
-## 📌 About This Repository
-
-This repository contains a collection of practical Python data-analysis projects.
-
-The main objective is to learn and demonstrate how Python can be used to:
-
-* Load real-world datasets
-* Explore structured data
-* Clean and transform data
-* Filter and sort datasets
-* Group and summarize information
-* Combine multiple datasets
-* Work with dates and times
-* Calculate statistics and percentages
-* Create charts and visualizations
-* Discover patterns and trends
-* Communicate data-driven insights
-
-Most projects are implemented as **Jupyter Notebooks (`.ipynb`)** with accompanying datasets.
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.9%2B-3776AB?logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/pandas-data%20analysis-150458?logo=pandas&logoColor=white" alt="pandas">
+  <img src="https://img.shields.io/badge/Matplotlib-visualization-11557c" alt="Matplotlib">
+  <img src="https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter&logoColor=white" alt="Jupyter">
+  <img src="https://img.shields.io/badge/projects-18-brightgreen" alt="18 projects">
+</p>
 
 ---
 
-## 🛠️ Technologies Used
+## 📖 About
 
-| Technology          | Purpose                                             |
-| ------------------- | --------------------------------------------------- |
-| 🐍 Python           | Main programming language                           |
-| 📓 Jupyter Notebook | Interactive development and analysis                |
-| 🐼 Pandas           | Data loading, cleaning, transformation and analysis |
-| 📊 Matplotlib       | Data visualization                                  |
-| 📄 CSV              | Main dataset format                                 |
-| 📑 TSV              | Tab-separated data used in selected projects        |
+This repository is a collection of 18 small data-analysis projects. Each folder has one Jupyter notebook, its CSV data, and its own README.
 
----
+Topics range from coffee preferences and flight delays to whale heart rates, volcanoes and Mondrian paintings. Every project follows the same flow: **load data → clean → calculate → visualise → conclude**.
 
-## 📚 Projects
+## 🧰 Language & Tools
 
-### 01. ☕ Coffee Survey
+| Item | What is used | Why |
+|---|---|---|
+| **Language** | Python 3.9+ (notebook kernel: Python 3.9.6) | Simple, readable, standard for data analysis |
+| **Notebook format** | Jupyter Notebook (`.ipynb`) | Code, charts and explanation in one place |
+| **Data handling** | `pandas` (all 18 projects) | Tables, filtering, grouping, merging, cleaning |
+| **Visualisation** | `matplotlib` (imported in 11 projects) | Bar, line and scatter charts, custom shapes |
+| **Data files** | CSV (and one TSV) | Plain-text tables, easy to load with `read_csv` |
+| **Documentation** | Markdown | Clean display on GitHub |
 
-**Folder:** `coffee-survey-project`
+> Only Python is used for the analysis. One dataset (flight delays) was originally extracted with the R package `anyflights`; the resulting CSV is included, no R code is.
 
-Analyzes coffee survey data and investigates preferences for dairy and plant-based coffee options.
+## 🗂️ Projects at a Glance
 
-**Main concepts:**
+✅ = guided walkthrough completed in the notebook  🧩 = starter notebook with open questions
 
-* CSV data loading
-* DataFrame manipulation
-* Column selection
-* Column renaming
-* Sorting
-* Survey analysis
-* Data visualization
+| # | Project | Topic | Data size | Libraries | Status |
+|---|---|---|---|---|---|
+| 1 | [A Plant-Based Coffee Shop](./coffee-survey-project) | Which dairy and plant-based milks should a new coffee shop stock? | 1,170 rows | pandas, matplotlib | ✅ |
+| 2 | [The Ocean's Deep-Diving Animals](./deepest-divers-project) | Which air-breathing animals dive the deepest, and how do you make a bar chart that tells a story? | 118 rows | pandas, matplotlib | ✅ |
+| 3 | [Emoji Sentiment](./emoji-sentiment-project) | Are popular emojis linked to positive or negative feelings? | 751 rows | pandas | 🧩 |
+| 4 | [What Is the First Day of the Week?](./first-day-of-week-project) | Do more countries and more people start the week on Sunday or Monday? | 257 rows (3 files) | pandas | 🧩 |
+| 5 | [Flight Delays](./flight-delays-project) | How does the day of the week affect the chance of a delayed departure? | 5,000 rows | pandas, matplotlib | ✅ |
+| 6 | [Is Granola Healthy?](./granola-healthy-project) | Where do the public and nutrition experts disagree about healthy food? | 40 foods | pandas, matplotlib | ✅ |
+| 7 | [Jean Pockets](./jean-pockets-project) | Are women's jean pockets really smaller than men's? | 80 rows | pandas | 🧩 |
+| 8 | [World's Largest Islands](./largest-islands-project) | Which are the biggest islands, by region and climate? | 100 rows | pandas, matplotlib | 🧩 |
+| 9 | [Art as Data (Mondrian Paintings)](./mondrian-art-project) | Can a table of rectangles describe a painting, and can data help spot a fake? | 3,204 rectangles | pandas, matplotlib, matplotlib.patches | ✅ |
+| 10 | [Naming Colors Across Languages](./naming-colors-project) | How do English, Spanish and Tsimane speakers name the same colors? | 80 rows | pandas, matplotlib | 🧩 |
+| 11 | [People on Banknotes](./people-on-banknotes-project) | Whose faces appear on banknotes around the world? | 279 rows | pandas | 🧩 |
+| 12 | [Skeletal Variation](./skeletal-variation-project) | How do human, mammal and bird skeletons compare, especially neck bones? | 206 + 302 + 81 rows | pandas | ✅ |
+| 13 | [Solar Eclipses](./solar-eclipses-project) | How long do solar eclipses last, and when are the next ones? | 444 rows | pandas | 🧩 |
+| 14 | [A Century of Top Songs](./top-songs-project) | Have number-one songs become longer or shorter over 100 years? | 101 rows | pandas, matplotlib | ✅ |
+| 15 | [Typing Speeds](./typing-speeds-project) | What affects how fast people type? | 168,594 rows | pandas | 🧩 |
+| 16 | [Volcano Eruptions](./volcanic-eruptions-project) | Which volcanoes have had the longest eruptions since 1800? | 3,724 + 1,281 rows | pandas, matplotlib | 🧩 |
+| 17 | [Blue Whale Heart Rates](./whale-heart-rates-project) | How much does a blue whale's heart rate change during a dive? | 1,087 rows | pandas, matplotlib | 🧩 |
+| 18 | [Our World Connected](./world-connected-project) | When did more than half of the world get online? | 35 + 125 rows | pandas, matplotlib | ✅ |
 
-**Technologies:** Python, Pandas, Matplotlib
+## 🧠 Skills Demonstrated
 
----
+If you know SQL, these pandas operations will look familiar:
 
-### 02. 🌊 Deepest Diving Animals
+| SQL idea | pandas | Used in |
+|---|---|---|
+| `SELECT col1, col2` | `df[['col1','col2']]` | Coffee Survey, Granola |
+| `WHERE` | `df.query('...')` | Skeletal Variation, Top Songs, Mondrian, World Connected |
+| `GROUP BY` + `MAX / AVG / COUNT` | `groupby().max() / mean() / size()` | Deepest Divers, Flight Delays, Mondrian |
+| `LEFT JOIN` | `merge(..., how='left')` | Granola, Mondrian, World Connected |
+| `ORDER BY` | `sort_values()` | most projects |
+| column alias (`AS`) | `rename()` | Coffee Survey |
+| `DISTINCT` | `drop_duplicates()` | People on Banknotes |
+| `IS NULL` / remove empty rows | `isna()` / `dropna()` | Coffee Survey, World Connected |
+| calculated column | `eval()` | Flight Delays, Granola, Top Songs, World Connected |
 
-**Folder:** `deepest-divers-project`
-
-Analyzes how deeply different animals can dive and compares maximum diving depths across categories.
-
-**Main concepts:**
-
-* Grouping data
-* Finding maximum values
-* Sorting
-* Bar charts
-* Visual storytelling
-
-**Technologies:** Python, Pandas, Matplotlib
-
----
-
-### 03. 😀 Emoji Sentiment
-
-**Folder:** `emoji-sentiment-project`
-
-Explores sentiment information associated with emojis using an existing research dataset.
-
-**Main concepts:**
-
-* Dataset exploration
-* Sentiment data
-* DataFrame analysis
-* CSV processing
-
-**Technologies:** Python, Pandas
-
-> Note: This project analyzes an existing sentiment dataset; it does not train a machine-learning sentiment model.
+Other skills: date and time handling (`to_datetime`, `strftime`), string splitting (`str.split`), type conversion (`astype`), and chart design (horizontal bars, sorted bars, reference bars, equality lines, labels on outliers, custom `matplotlib.patches`).
 
 ---
 
-### 04. 📅 First Day of the Week
+## 📚 Project Details
 
-**Folder:** `first-day-of-week-project`
+### 1. A Plant-Based Coffee Shop
 
-Explores the first day of the week used across different countries and regions.
+**Folder:** [`coffee-survey-project`](./coffee-survey-project)  
+**Status:** ✅ Guided walkthrough (complete)  
+**Libraries:** pandas, matplotlib
 
-The project includes population and regional datasets for additional analysis.
+**Question:** A new specialty coffee shop will serve only plant-based drinks. Using a coffee-lover survey, which dairy alternatives are most popular?
 
-**Main concepts:**
+**Why these tools:** **pandas**: The survey is a table with 30 long, sentence-style column names. pandas can select, rename and clean columns in a few lines. Answers are stored as 1/0, so `mean() x 100` directly gives the percentage of people. **matplotlib**: A horizontal bar chart ranks the milk types so the winner is easy to see.
 
-* Multiple datasets
-* Country/region analysis
-* Data exploration
-* Population data
+**Key results:**
 
-**Technologies:** Python, Pandas
+- Whole milk is the most popular option overall.
+- Oat milk is the most popular plant-based choice, so it is a good default for the shop.
+- Percentages add up to more than 100% because people can choose more than one milk.
 
----
-
-### 05. ✈️ Flight Delays
-
-**Folder:** `flight-delays-project`
-
-Analyzes flight departure delays and investigates how delays vary by day of the week.
-
-The project works with flight data and U.S. passenger-volume data.
-
-**Main concepts:**
-
-* CSV/TSV data
-* Datetime conversion
-* Delay calculation
-* Grouping
-* Percentage calculations
-* Bar charts
-* Transportation analysis
-
-**Technologies:** Python, Pandas, Matplotlib
+[➡ Full details](./coffee-survey-project/README.md)
 
 ---
 
-### 06. 🥣 Is Granola Healthy?
+### 2. The Ocean's Deep-Diving Animals
 
-**Folder:** `granola-healthy-project`
+**Folder:** [`deepest-divers-project`](./deepest-divers-project)  
+**Status:** ✅ Guided walkthrough (complete)  
+**Libraries:** pandas, matplotlib
 
-Compares public opinions with expert opinions about the healthiness of different foods.
+**Question:** How deep can penguins, seals, whales and other animals dive, and which categories go deepest?
 
-**Main concepts:**
+**Why these tools:** **pandas**: `groupby()` finds the maximum depth per category in one line. **matplotlib**: The main goal of this project is chart design. matplotlib lets you control orientation, colours, grid lines and spines to turn a default chart into a clear one.
 
-* Multiple datasets
-* Percentage calculations
-* Dataset merging
-* Scatter plots
-* Equality/reference lines
-* Comparative analysis
+**Key results:**
 
-**Technologies:** Python, Pandas, Matplotlib
+- Penguins reach up to 564 m, much deeper than other seabirds (152 m).
+- Only 3 animal categories dive deeper than the 730 m submarine reference.
 
----
-
-### 07. 👖 Jean Pockets
-
-**Folder:** `jean-pockets-project`
-
-Analyzes measurements of jean pockets and explores differences in pocket dimensions.
-
-**Main concepts:**
-
-* Data loading
-* Measurement analysis
-* Data exploration
-* Comparison of structured data
-
-**Technologies:** Python, Pandas
+[➡ Full details](./deepest-divers-project/README.md)
 
 ---
 
-### 08. 🏝️ World's Largest Islands
+### 3. Emoji Sentiment
 
-**Folder:** `largest-islands-project`
+**Folder:** [`emoji-sentiment-project`](./emoji-sentiment-project)  
+**Status:** 🧩 Starter (questions left to solve)  
+**Libraries:** pandas
 
-Analyzes data about the world's largest islands and compares their areas.
+**Question:** Researchers labelled 1.6 million tweets in 13 European languages as positive (+1), negative (-1) or neutral (0). About 4% of the tweets contained emojis. Which emojis are positive and which are negative?
 
-**Main concepts:**
+**Why these tools:** **pandas**: The task is data cleaning and new columns (`sentiment = pos - neg`, a `positive_flag`), which are core pandas operations. No chart is needed yet, so matplotlib is not imported.
 
-* Geographical data
-* Ranking
-* Data comparison
-* Visualization
+**Open questions:** Remove unneeded columns and rename the rest in `snake_case`. | Add `sentiment` = % positive - % negative. | Add `positive_flag` = True when sentiment > 0.
 
-**Technologies:** Python, Pandas, Matplotlib
-
----
-
-### 09. 🎨 Mondrian Art — Art as Data
-
-**Folder:** `mondrian-art-project`
-
-Treats Piet Mondrian paintings as structured data by analyzing geometric features such as rectangles, positions, widths and heights.
-
-The project explores painting complexity over time and includes an investigation into possible unusual or fake paintings.
-
-**Main concepts:**
-
-* Structured representation of artwork
-* Geometric data
-* Data visualization
-* Dataset merging
-* Complexity analysis
-* Rectangle visualization
-* Scatter plots
-
-**Technologies:** Python, Pandas, Matplotlib, Matplotlib Patches
+[➡ Full details](./emoji-sentiment-project/README.md)
 
 ---
 
-### 10. 🎨 Naming Colors
+### 4. What Is the First Day of the Week?
 
-**Folder:** `naming-colors-project`
+**Folder:** [`first-day-of-week-project`](./first-day-of-week-project)  
+**Status:** 🧩 Starter (questions left to solve)  
+**Libraries:** pandas
 
-Explores how colors are named across languages using a research dataset.
+**Question:** Compare the number of territories, the number of people, and the regions that start their week on Friday, Saturday, Sunday or Monday.
 
-**Main concepts:**
+**Why these tools:** **pandas**: The answer needs three separate tables to be combined on the country code (`alpha3`). pandas `merge()` works like a SQL JOIN, so you can weight countries by population and group by region.
 
-* Cultural data analysis
-* Language comparison
-* Color classification
-* Data visualization
+**Open questions:** How many territories start the week on Fri / Sat / Sun / Mon? | How many people start the week on each day? (needs a `merge`) | Which regions mostly start on Sunday or Monday, and which are split? (also a `merge`)
 
-**Technologies:** Python, Pandas, Matplotlib
-
----
-
-### 11. 💵 People on Banknotes
-
-**Folder:** `people-on-banknotes-project`
-
-Analyzes the people represented on banknotes from different countries and currencies.
-
-**Main concepts:**
-
-* Historical data
-* Country and currency analysis
-* Data cleaning
-* Data exploration
-
-**Technologies:** Python, Pandas
+[➡ Full details](./first-day-of-week-project/README.md)
 
 ---
 
-### 12. 🦴 Skeletal Variation
+### 5. Flight Delays
 
-**Folder:** `skeletal-variation-project`
+**Folder:** [`flight-delays-project`](./flight-delays-project)  
+**Status:** ✅ Guided walkthrough (complete)  
+**Libraries:** pandas, matplotlib
 
-Investigates variation in skeletal structures across humans, mammals and birds.
+**Question:** On which day of the week are departures from the world's busiest airport most often late?
 
-The project examines human bone distribution and variation in the number of neck vertebrae among different animals.
+**Why these tools:** **pandas**: Dates and times arrive as text. pandas can convert them (`to_datetime`), subtract them to get a delay, and group by weekday. Text cannot be subtracted, which is why the conversion is needed. **matplotlib**: A bar chart of % delayed per weekday shows the pattern at a glance.
 
-**Main concepts:**
+**Key results:**
 
-* Biological data analysis
-* Frequency analysis
-* Grouping
-* Filtering
-* Data comparison
-* Bar charts
+- Sunday has the highest percentage of delayed flights.
+- Tuesday has the fewest late flights.
 
-**Technologies:** Python, Pandas
+[➡ Full details](./flight-delays-project/README.md)
 
 ---
 
-### 13. 🌑 Solar Eclipses
+### 6. Is Granola Healthy?
 
-**Folder:** `solar-eclipses-project`
+**Folder:** [`granola-healthy-project`](./granola-healthy-project)  
+**Status:** ✅ Guided walkthrough (complete)  
+**Libraries:** pandas, matplotlib
 
-Explores historical and future solar eclipse data.
+**Question:** For 40 foods, how closely do the opinions of the public and the experts match, and which foods split them the most?
 
-**Main concepts:**
+**Why these tools:** **pandas**: Two separate tables are cleaned in the same way and then combined with a left merge on `food`. **matplotlib**: The project is about better scatter plots for paired data: equality line, square axes, transparent dots and text labels on the outliers.
 
-* Astronomical datasets
-* Date-based analysis
-* Data exploration
-* Filtering and comparison
+**Key results:**
 
-**Technologies:** Python, Pandas
+- Both groups agree that apples are healthy (public 96%, experts 99%) and white bread is not (public 20%, experts 15%).
+- The biggest disagreement is granola bar, a 43-point gap between the public and experts.
+
+[➡ Full details](./granola-healthy-project/README.md)
 
 ---
 
-### 14. 🎵 A Century of Top Songs
+### 7. Jean Pockets
 
-**Folder:** `top-songs-project`
+**Folder:** [`jean-pockets-project`](./jean-pockets-project)  
+**Status:** 🧩 Starter (questions left to solve)  
+**Libraries:** pandas
 
-Analyzes how the duration of top songs changed over time.
+**Question:** Compare pocket height and width (front and back, in cm) between men's and women's jeans and between styles.
 
-The project demonstrates how to transform duration strings such as:
+**Why these tools:** **pandas**: The comparison is group averages (`groupby` by gender and style) on a small, clean table, which is exactly what pandas is good at.
+
+**Open questions:** Average difference in front pocket height between women's and men's jeans. | Skinny vs straight: is there a difference inside the same gender? | Back pocket sizes: women vs men.
+
+[➡ Full details](./jean-pockets-project/README.md)
+
+---
+
+### 8. World's Largest Islands
+
+**Folder:** [`largest-islands-project`](./largest-islands-project)  
+**Status:** 🧩 Starter (questions left to solve)  
+**Libraries:** pandas, matplotlib
+
+**Question:** Explore the 100 largest islands: the biggest in the tropics, the biggest per region, how area falls with rank, and which islands belong to more than one country.
+
+**Why these tools:** **pandas**: Filtering (`climate == 'tropics'`), `groupby('region')` and string search (`countries.str.contains(',')`) are all pandas operations. **matplotlib**: Imported for the planned line graph of `area` against `rank`.
+
+**Open questions:** 10 largest islands in the tropics. | Largest island in each `region`. | Line graph of `area` (y) vs `rank` (x).
+
+[➡ Full details](./largest-islands-project/README.md)
+
+---
+
+### 9. Art as Data (Mondrian Paintings)
+
+**Folder:** [`mondrian-art-project`](./mondrian-art-project)  
+**Status:** ✅ Guided walkthrough (complete)  
+**Libraries:** pandas, matplotlib, matplotlib.patches
+
+**Question:** Mondrian's style moved towards simplicity. How can we measure complexity, how did it change over time, and does a suspect painting fit the pattern?
+
+**Why these tools:** **pandas**: Paintings are stored as rows in a table. `query()`, `groupby()` and `merge()` turn rows into per-painting numbers. **matplotlib + patches**: `matplotlib.patches.Rectangle` draws each row as a coloured rectangle, so data becomes a picture again (function `draw_mondrian()`). A scatter plot then shows complexity over time.
+
+**Key results:**
+
+- Complexity increases after 1935, showing a change in style.
+- The suspect 1926 painting is a clear outlier with much higher complexity than other paintings of that period, which suggests it could be a fake.
+
+[➡ Full details](./mondrian-art-project/README.md)
+
+---
+
+### 10. Naming Colors Across Languages
+
+**Folder:** [`naming-colors-project`](./naming-colors-project)  
+**Status:** 🧩 Starter (questions left to solve)  
+**Libraries:** pandas, matplotlib
+
+**Question:** Participants saw 80 colour chips (evenly spaced in the Munsell array) and chose one of 11 colour words. What share of chips is called red, green, etc. in each language, and do the languages correlate?
+
+**Why these tools:** **pandas**: Counting how often each colour name appears per language is a `value_counts()` / `groupby` task. Several tables can be combined with `merge`. **matplotlib**: Rectangles drawn on a grid reproduce the colour chart; later, bar and scatter plots compare languages.
+
+**Open questions:** For each language, % of chips named each colour. | Horizontal bar chart per language. | Scatter plots to compare languages (e.g. English vs Tsimane), which needs `merge`.
+
+[➡ Full details](./naming-colors-project/README.md)
+
+---
+
+### 11. People on Banknotes
+
+**Folder:** [`people-on-banknotes-project`](./people-on-banknotes-project)  
+**Status:** 🧩 Starter (questions left to solve)  
+**Libraries:** pandas
+
+**Question:** The data covers 241 people on banknotes from 38 countries. What are their genders, occupations and ages, and were they alive when first printed?
+
+**Why these tools:** **pandas**: The notebook already uses `drop(columns=['value'])` and `drop_duplicates(subset='name')` so each person counts once. Questions like 'what % are female?' use `value_counts(normalize=True)`; country questions use `groupby` + median.
+
+**Open questions:** Male vs female proportion. | Writers or politicians: which are more common? What % are musicians? | What % of banknotes were issued before the person's death? (look for negative or NaN in `first_death_diff`)
+
+[➡ Full details](./people-on-banknotes-project/README.md)
+
+---
+
+### 12. Skeletal Variation
+
+**Folder:** [`skeletal-variation-project`](./skeletal-variation-project)  
+**Status:** ✅ Guided walkthrough (complete)  
+**Libraries:** pandas (with pandas built-in plotting)
+
+**Question:** Are there really more bones in hands and feet than anywhere else? How many bones does a baby have? Do all mammals have 7 neck vertebrae? What about birds?
+
+**Why these tools:** **pandas**: Every question is a count, sum, sort or filter on a table (`value_counts`, `sum`, `sort_values`, `query`). The notebook needs no separate plotting library: pandas' own `.plot.bar()` makes the one chart (it uses matplotlib internally).
+
+**Key results:**
+
+- The claim is true: over 51% of human bones are in the hands and feet.
+- Adults have 206 bones; infants have 305 before bones fuse.
+- Giraffes also have 7 neck vertebrae. Among mammals only manatees and sloths differ.
+- Birds vary much more: 13 is the most common count, 23 is the maximum (Mute swan).
+
+[➡ Full details](./skeletal-variation-project/README.md)
+
+---
+
+### 13. Solar Eclipses
+
+**Folder:** [`solar-eclipses-project`](./solar-eclipses-project)  
+**Status:** 🧩 Starter (questions left to solve)  
+**Libraries:** pandas
+
+**Question:** What is the average duration of totality in a total solar eclipse, and when did the longest eclipse happen?
+
+**Why these tools:** **pandas**: `duration` is stored as text like `06m29s` and `date` as text. pandas string methods (`str.replace`) and `to_datetime` convert them so you can sort and average them.
+
+**Open questions:** When was the longest eclipse? The longest total eclipse? (convert duration to seconds) | Average duration of total solar eclipses. | Show the next 10 solar eclipses (convert date to datetime).
+
+[➡ Full details](./solar-eclipses-project/README.md)
+
+---
+
+### 14. A Century of Top Songs
+
+**Folder:** [`top-songs-project`](./top-songs-project)  
+**Status:** ✅ Guided walkthrough (complete)  
+**Libraries:** pandas, matplotlib
+
+**Question:** What is the ideal length of a hit song and how did song durations change over time?
+
+**Why these tools:** **pandas**: The key lesson is data types: a duration like `00:02:43` is text, so it cannot be plotted. pandas string split + type conversion turns it into numbers. **matplotlib**: A line chart of song length by year shows the trend and the spike.
+
+**Key results:**
+
+- The shortest number-one song is 'Sonny Boy' (1928).
+- The longest is 'Hey Jude' by The Beatles (1968, 431 seconds), a sharp spike on the chart; durations are higher afterwards.
+
+[➡ Full details](./top-songs-project/README.md)
+
+---
+
+### 15. Typing Speeds
+
+**Folder:** [`typing-speeds-project`](./typing-speeds-project)  
+**Status:** 🧩 Starter (questions left to solve)  
+**Libraries:** pandas
+
+**Question:** Using data from an online typing test (15 sentences each), compare typing speed (`AVG_WPM_15`) by finger count, rollover ratio and typing course.
+
+**Why these tools:** **pandas**: This is the biggest file in the repo (168,594 rows). pandas filters and compares groups quickly, which is needed for the 'keep other variables constant' comparisons described in the ideas.
+
+**Open questions:** Drop `PARTICIPANT_ID` and rename columns (`AVG_WPM_15` to `wpm`, `ROR` to `ror`, `HAS_TAKEN_TYPING_COURSE` to `course`). | Compare speed by number of fingers after filtering to similar age, layout, language, keyboard type and course; exclude error rate above 3%. | Rollover ratio: compare ROR <= 20% with ROR > 80%.
+
+[➡ Full details](./typing-speeds-project/README.md)
+
+---
+
+### 16. Volcano Eruptions
+
+**Folder:** [`volcanic-eruptions-project`](./volcanic-eruptions-project)  
+**Status:** 🧩 Starter (questions left to solve)  
+**Libraries:** pandas, matplotlib
+
+**Question:** Which volcanoes were still erupting in December 2024, and which had the longest eruptions?
+
+**Why these tools:** **pandas**: Dates like `07-1913` must be converted with `to_datetime`, durations calculated, and the eruption table joined with the volcano table through `volcano_id` (like a SQL JOIN). **matplotlib**: Imported for a future chart.
+
+**Open questions:** Volcanoes erupting as of Dec 2024. | Volcanoes with the longest eruptions. | Hints: `pd.to_datetime`, merge the volcano table into eruptions, keep only needed columns before merging, `sort_values`.
+
+[➡ Full details](./volcanic-eruptions-project/README.md)
+
+---
+
+### 17. Blue Whale Heart Rates
+
+**Folder:** [`whale-heart-rates-project`](./whale-heart-rates-project)  
+**Status:** 🧩 Starter (questions left to solve)  
+**Libraries:** pandas, matplotlib
+
+**Question:** Heart rate (beats per minute) is recorded through five dive phases: descent, lunge, filter, ascent and surface. How does it change, and is dive duration linked to the maximum heart rate at the surface afterwards?
+
+**Why these tools:** **pandas**: Warm-up: `groupby('dive_phase')` average. Challenge: convert `timestamp` to datetime, find start and end per `dive_id`, compute duration in minutes, then merge two small tables. **matplotlib**: Scatter plot of dive duration vs maximum surface heart rate.
+
+**Open questions:** Warm-up: average heart rate per dive phase. | Challenge: dive duration per `dive_id` (first descent to last ascent), maximum surface heart rate per dive, merge, scatter plot.
+
+[➡ Full details](./whale-heart-rates-project/README.md)
+
+---
+
+### 18. Our World Connected
+
+**Folder:** [`world-connected-project`](./world-connected-project)  
+**Status:** ✅ Guided walkthrough (complete)  
+**Libraries:** pandas, matplotlib
+
+**Question:** What percentage of the world population used the Internet each year, and in which year did it pass 50%?
+
+**Why these tools:** **pandas**: Two tables (users, population) share a `year` column, so a left `merge` combines them. `eval()` calculates the percentage and `query()` finds the crossing year. **matplotlib**: A line chart with a 50% reference line (`axhline`) shows the growth.
+
+**Key results:**
+
+- Internet users grew from 3 million in 1990 to over 100 million in 7 years.
+- Less than 0.1% of the world used the Internet in 1990; over 65% by 2022.
+- The first year above 50% was 2019.
+
+[➡ Full details](./world-connected-project/README.md)
+
+---
+
+## 📁 Repository Structure
 
 ```text
-00:02:43
-```
-
-into numeric values representing total seconds.
-
-**Main concepts:**
-
-* String manipulation
-* Splitting columns
-* Type conversion
-* Mathematical calculations
-* Data visualization
-* Finding maximum values
-
-**Technologies:** Python, Pandas, Matplotlib
-
----
-
-### 15. ⌨️ Typing Speeds
-
-**Folder:** `typing-speeds-project`
-
-Analyzes typing-speed data collected from more than 168,000 participants.
-
-Potential analysis includes relationships between typing speed and:
-
-* Age
-* Typing courses
-* Keyboard layout
-* Keyboard type
-* Number of fingers used
-* Error rate
-* Rollover ratio
-* Country
-* Native language
-
-**Main concepts:**
-
-* Large datasets
-* Data exploration
-* Filtering
-* Comparative analysis
-* Behavioral data
-
-**Technologies:** Python, Pandas
-
----
-
-### 16. 🌋 Volcanic Eruptions
-
-**Folder:** `volcanic-eruptions-project`
-
-Analyzes volcanic eruptions since 1800 and investigates which volcanoes have experienced the longest eruptions.
-
-The project combines eruption data with detailed volcano information.
-
-**Main concepts:**
-
-* Date conversion
-* Dataset merging
-* Sorting
-* Eruption-duration analysis
-* Geological data
-
-**Technologies:** Python, Pandas, Matplotlib
-
----
-
-### 17. 🐋 Blue Whale Heart Rates
-
-**Folder:** `whale-heart-rates-project`
-
-Analyzes blue whale heart-rate data during deep dives.
-
-The dataset records different dive phases such as:
-
-* Descent
-* Lunging
-* Filtering
-* Ascent
-* Surface
-
-The project can be extended to study the relationship between dive duration and maximum surface heart rate.
-
-**Main concepts:**
-
-* Biological data
-* Time-series data
-* Datetime conversion
-* Grouping by dive
-* Duration calculations
-* Scatter plots
-
-**Technologies:** Python, Pandas, Matplotlib
-
----
-
-### 18. 🌍 Our World Connected
-
-**Folder:** `world-connected-project`
-
-Analyzes the growth of Internet usage around the world and compares Internet users with global population.
-
-The project combines:
-
-* World Internet user data
-* Historical population data
-* Continental Internet-user data
-* Continental population data
-
-**Main concepts:**
-
-* Multiple datasets
-* Dataset merging
-* Missing-value handling
-* Percentage calculations
-* Time-series analysis
-* Line charts
-* Global technology trends
-
-One of the notebook's key analyses identifies **2019 as the first year in its dataset when more than half of the world's population was connected to the Internet**.
-
-**Technologies:** Python, Pandas, Matplotlib
-
----
-
-# 📊 Skills Demonstrated
-
-This collection covers a wide range of practical Python data-analysis skills.
-
-## Data Loading
-
-```python
-pd.read_csv()
-```
-
-## Data Exploration
-
-```python
-df.head()
-df.info()
-df.value_counts()
-```
-
-## Filtering
-
-```python
-df.query()
-```
-
-## Sorting
-
-```python
-df.sort_values()
-```
-
-## Grouping
-
-```python
-df.groupby()
-```
-
-## Combining Data
-
-```python
-df.merge()
-```
-
-## Datetime Processing
-
-```python
-pd.to_datetime()
-```
-
-## Data Type Conversion
-
-```python
-astype()
-```
-
-## Calculated Columns
-
-```python
-df.eval()
-```
-
-## Visualization
-
-```python
-plt.plot()
-plt.bar()
-plt.scatter()
-```
-
----
-
-# 🧠 Main Data Analysis Workflow
-
-The projects generally follow this workflow:
-
-```text
-Real-World Dataset
-        ↓
-    Load Data
-        ↓
-   Explore Data
-        ↓
-   Clean Data
-        ↓
- Transform Data
-        ↓
- Analyze Data
-        ↓
- Find Patterns
-        ↓
- Visualize Results
-        ↓
- Communicate Insights
-```
-
----
-
-# 📈 Project Categories
-
-| Category                   | Projects                               |
-| -------------------------- | -------------------------------------- |
-| ☕ Survey Analysis          | Coffee Survey                          |
-| 🌊 Marine Biology          | Deepest Divers, Blue Whale Heart Rates |
-| 😀 Sentiment               | Emoji Sentiment                        |
-| 🌍 Geography               | Largest Islands, First Day of Week     |
-| ✈️ Transportation          | Flight Delays                          |
-| 🥣 Food & Survey           | Is Granola Healthy?                    |
-| 👖 Product Analysis        | Jean Pockets                           |
-| 🎨 Art & Data              | Mondrian Art                           |
-| 🌈 Language & Culture      | Naming Colors                          |
-| 💵 Historical Data         | People on Banknotes                    |
-| 🦴 Biology                 | Skeletal Variation                     |
-| 🌑 Astronomy               | Solar Eclipses                         |
-| 🎵 Music                   | Top Songs                              |
-| ⌨️ Human Behavior          | Typing Speeds                          |
-| 🌋 Geology                 | Volcanic Eruptions                     |
-| 🐋 Marine Biology          | Whale Heart Rates                      |
-| 🌐 Technology & Population | Our World Connected                    |
-
----
-
-# 📂 Repository Structure
-
-```text
-Python/
-│
+python-data-analysis-projects/
+├── README.md
+├── requirements.txt
+├── .gitignore
 ├── coffee-survey-project/
+│   ├── README.md
+│   ├── DATA_SOURCES.txt
+│   ├── coffee-survey-project.ipynb
+│   ├── coffee-survey-results.csv
+│   └── coffee-survey-full-dataset.csv
 ├── deepest-divers-project/
 ├── emoji-sentiment-project/
 ├── first-day-of-week-project/
@@ -568,221 +428,65 @@ Python/
 └── world-connected-project/
 ```
 
-Each project generally contains:
+Every project folder has the same layout: one notebook, its data files, `README.md` and `DATA_SOURCES.txt`.
 
-```text
-Project/
-├── notebook.ipynb
-├── dataset.csv
-└── README.md
-```
-
-Some projects contain multiple datasets.
-
----
-
-# 🚀 How to Run the Projects
-
-## 1. Clone the repository
+## ▶️ How to Run
 
 ```bash
-git clone <your-repository-url>
-```
+# 1. Clone
+git clone https://github.com/<your-username>/python-data-analysis-projects.git
+cd python-data-analysis-projects
 
-## 2. Open the project
+# 2. (Optional) virtual environment
+python -m venv .venv
+source .venv/bin/activate        # Windows: .venv\Scripts\activate
 
-Open the desired project folder in VS Code, Jupyter Notebook or JupyterLab.
+# 3. Install
+pip install -r requirements.txt
 
-## 3. Install the required libraries
-
-```bash
-pip install pandas matplotlib jupyter
-```
-
-For the Mondrian project:
-
-```bash
-pip install matplotlib
-```
-
-## 4. Start Jupyter
-
-```bash
+# 4. Open any project
+cd coffee-survey-project
 jupyter notebook
 ```
 
-or:
+**Google Colab:** each notebook has a commented cell at the top. Uncomment it, upload the CSV files from the same folder, then run all cells.
 
-```bash
-jupyter lab
-```
+## 📚 Data Sources & Credits
 
-## 5. Open a project notebook
+| Project | Source |
+|---|---|
+| A Plant-Based Coffee Shop | The Great American Taste Test by James Hoffmann (anonymised survey data). |
+| The Ocean's Deep-Diving Animals | Scientific papers listed per animal in `DATA_SOURCES.txt`. |
+| Emoji Sentiment | Kralj Novak, P. et al. 'Sentiment of emojis', PLoS ONE 10(12), 2015. https://kt.ijs.si/data/Emoji_sentiment_ranking/index.html |
+| What Is the First Day of the Week? | Unicode CLDR supplemental data (first day); UN population via gapminder.org; four regions from gapminder.org. |
+| Flight Delays | Flight data extracted with the R package `anyflights` (336,434 ATL flights in 2023, 5,000 sampled). Passenger counts from TSA (tsa.gov/travel/passenger-volumes/2023). Only the resulting CSV files are in this repo; no R code is included. |
+| Is Granola Healthy? | Quealy & Sanger-Katz, 'Is sushi healthy? What about granola?', The New York Times, 2016. |
+| Jean Pockets | Diehm & Thomas, 'Someone clever once said Women were not allowed POCKETS', The Pudding, Aug 2018. https://pudding.cool/2018/08/pockets/ |
+| World's Largest Islands | Visual Capitalist, 'Visualizing the World's 100 Biggest Islands' (2021); based on a map by David Garcia; areas from Britannica and Wikipedia. |
+| Art as Data (Mondrian Paintings) | Images from the Mondrian catalogue raisonne (pietmondrian.rkdmonographs.nl). Features extracted with algorithms written by the course authors. |
+| Naming Colors Across Languages | Gibson, E. et al. 'Color naming across languages reflects color use', PNAS 114(40), 2017 (Figure S6, Supporting Information). |
+| People on Banknotes | The Pudding, 'Who's in Your Wallet?' (Arevalo et al., Apr 2022). https://pudding.cool/2022/04/banknotes/ |
+| Skeletal Variation | Williams et al. 2019, Nature Ecology & Evolution (mammals); bird papers listed by DOI in `DATA_SOURCES.txt`. |
+| Solar Eclipses | NASA, 'Solar Eclipses: Past and Future'. https://eclipse.gsfc.nasa.gov/solar.html |
+| A Century of Top Songs | Durations looked up manually for the specific version that was popular when each song ranked #1. |
+| Typing Speeds | Dhakal et al., 'Observations on typing from 136 million keystrokes', CHI 2018. https://userinterfaces.aalto.fi/136Mkeystrokes/ |
+| Volcano Eruptions | Global Volcanism Program (2024), Volcanoes of the World v5.2.5, Smithsonian Institution. https://doi.org/10.5479/si.GVP.VOTW5-2024.5.2 |
+| Blue Whale Heart Rates | Goldbogen et al., 'Extreme bradycardia and tachycardia in the world's largest animal', PNAS 116(50), 2019. https://purl.stanford.edu/zp260dk8787 |
+| Our World Connected | Our World in Data (population: HYDE, Gapminder, UN WPP; Internet: Ritchie et al. 2023) and Statista. |
 
-For example:
+All datasets belong to their original authors. They are used here for learning and portfolio purposes. Please follow each source's own terms if you reuse the data.
 
-```text
-world-connected-project/world-connected-project.ipynb
-```
+## 📝 Notes
 
-Run the notebook cells from top to bottom.
-
----
-
-# 📚 Data Sources
-
-The projects use data from a variety of research and public sources, including:
-
-* NASA
-* Our World in Data
-* Gapminder
-* United Nations
-* Smithsonian Global Volcanism Program
-* Stanford Digital Repository
-* Aalto University
-* The Pudding
-* The New York Times
-* Research publications and academic datasets
-* Other project-specific research sources
-
-Each project contains a `README.md` with its specific data source information.
-
----
-
-# 🎯 Learning Goals
-
-This repository demonstrates practical experience with:
-
-* Python fundamentals for data analysis
-* Pandas
-* DataFrames
-* CSV data
-* Data cleaning
-* Data transformation
-* Data aggregation
-* Dataset merging
-* Date/time processing
-* Statistical exploration
-* Data visualization
-* Scientific datasets
-* Real-world datasets
-* Data storytelling
-
----
-
-# ⭐ Featured Projects
-
-If you are reviewing this repository for a portfolio, the following projects demonstrate particularly useful combinations of skills:
-
-### 🥇 Our World Connected
-
-Demonstrates:
-
-```text
-Multiple datasets
-+ merging
-+ missing values
-+ calculations
-+ time-series analysis
-+ visualization
-```
-
-### 🥈 Mondrian Art
-
-Demonstrates:
-
-```text
-Art
-+ structured data
-+ geometry
-+ visualization
-+ complexity analysis
-```
-
-### 🥉 Flight Delays
-
-Demonstrates:
-
-```text
-Datetime processing
-+ calculations
-+ grouping
-+ percentages
-+ visualization
-```
-
-### ⭐ Is Granola Healthy?
-
-Demonstrates:
-
-```text
-Multiple datasets
-+ merging
-+ comparative analysis
-+ scatter plots
-```
-
-### ⭐ Top Songs
-
-Demonstrates:
-
-```text
-String processing
-+ type conversion
-+ mathematical transformation
-+ visualization
-```
-
----
-
-# 👨‍💻 Skills Summary
-
-```text
-Python
-├── Pandas
-│   ├── Data Loading
-│   ├── Data Cleaning
-│   ├── Filtering
-│   ├── Sorting
-│   ├── Grouping
-│   ├── Aggregation
-│   ├── Merging
-│   └── Datetime Processing
-│
-├── Matplotlib
-│   ├── Bar Charts
-│   ├── Line Charts
-│   ├── Scatter Plots
-│   └── Custom Visualizations
-│
-└── Jupyter Notebook
-    ├── Markdown
-    ├── Python Analysis
-    ├── Data Exploration
-    └── Data Visualization
-```
-
----
-
-# 📌 Note
-
-This repository is focused on **Python data analysis and visualization**.
-
-It is not primarily a collection of:
-
-* Machine Learning projects
-* Deep Learning projects
-* Web applications
-* Backend applications
-* Mobile applications
-* SQL applications
-
-The main focus is:
-
-> **Python + Pandas + Data Analysis + Data Visualization + Real-World Datasets**
-
----
+- `typing-speeds.csv` is the largest file (about 11 MB).
+- `departures-check-point.tsv` in the flight-delays project is written by the notebook itself.
+- Starter notebooks contain a `# YOUR CODE HERE` cell. Their questions are listed in each project README.
 
 ## 📄 License
 
-This repository contains datasets obtained from various external sources. Please refer to the individual project documentation and original data sources for their respective licensing and attribution requirements.
+Add your license here (for example MIT) and the name of the course or provider these project briefs came from.
+
+## 👤 Author
+
+**Your Name**  
+GitHub: [@your-username](https://github.com/your-username) · LinkedIn: [your-profile](https://linkedin.com/in/your-profile)
